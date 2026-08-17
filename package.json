@@ -1,0 +1,37 @@
+{
+  "name": "geonmae-banhada",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "next dev",
+    "test": "vitest run",
+    "images:t4:contact-sheets": "node scripts/create-template4-regional-contact-sheets.mjs",
+    "images:t4:focal-contact-sheet": "node scripts/create-template4-regional-focal-contact-sheet.mjs",
+    "images:t4:focal-analysis": "node scripts/create-template4-regional-focal-analysis.mjs",
+    "images:t4:approve": "node scripts/create-template4-regional-root-review.mjs --approve-reviewed-assets",
+    "images:t4:release": "node --import tsx scripts/release-template4-regional-images.mjs",
+    "audit:build": "node scripts/audit-built-output.mjs",
+    "typecheck": "next typegen && tsc --noEmit",
+    "lint": "eslint .",
+    "build": "next build",
+    "verify": "pnpm test && pnpm typecheck && pnpm lint && pnpm build && pnpm audit:build"
+  },
+  "dependencies": {
+    "next": "16.3.0",
+    "react": "19.2.8",
+    "react-dom": "19.2.8"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.3.0",
+    "sharp": "0.34.5",
+    "tsx": "^4.23.12",
+    "typescript": "^5",
+    "vitest": "^4.1.10"
+  },
+  "packageManager": "pnpm@10.29.3"
+}

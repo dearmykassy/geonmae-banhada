@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "geonmae-banhada-template4-regional-focal-points/v1",
+  "status": "PROPOSED_FOCAL_CROP_METADATA",
+  "platformKey": "geonmae-banhada",
+  "profile": "mobile",
+  "derivative": {
+    "width": 768,
+    "height": 600,
+    "fit": "cover"
+  },
+  "consumerCovers": [
+    {
+      "name": "mobile-390",
+      "viewportWidth": 390,
+      "viewportHeight": 620,
+      "position": "center top"
+    },
+    {
+      "name": "mobile-320",
+      "viewportWidth": 320,
+      "viewportHeight": 620,
+      "position": "center top"
+    }
+  ],
+  "coordinateScale": 1000,
+  "defaultFocalPoint": {
+    "xPermille": 500,
+    "yPermille": 500
+  },
+  "overrides": [
+    { "assetId": "gmb-t4-rgn-079-v1", "xPermille": 640, "yPermille": 500 },
+    { "assetId": "gmb-t4-rgn-080-v1", "xPermille": 640, "yPermille": 500 },
+    { "assetId": "gmb-t4-rgn-081-v1", "xPermille": 640, "yPermille": 500 },
+    { "assetId": "gmb-t4-rgn-083-v1", "xPermille": 640, "yPermille": 500 },
+    { "assetId": "gmb-t4-rgn-084-v1", "xPermille": 640, "yPermille": 500 },
+    { "assetId": "gmb-t4-rgn-092-v1", "xPermille": 640, "yPermille": 500 },
+    { "assetId": "gmb-t4-rgn-094-v1", "xPermille": 640, "yPermille": 500 },
+    { "assetId": "gmb-t4-rgn-095-v1", "xPermille": 640, "yPermille": 500 },
+    { "assetId": "gmb-t4-rgn-096-v1", "xPermille": 640, "yPermille": 500 },
+    { "assetId": "gmb-t4-rgn-097-v1", "xPermille": 640, "yPermille": 500 },
+    { "assetId": "gmb-t4-rgn-098-v1", "xPermille": 640, "yPermille": 500 },
+    { "assetId": "gmb-t4-rgn-103-v1", "xPermille": 640, "yPermille": 500 },
+    { "assetId": "gmb-t4-rgn-104-v1", "xPermille": 640, "yPermille": 500 },
+    { "assetId": "gmb-t4-rgn-107-v1", "xPermille": 640, "yPermille": 500 },
+    { "assetId": "gmb-t4-rgn-109-v1", "xPermille": 640, "yPermille": 500 },
+    { "assetId": "gmb-t4-rgn-112-v1", "xPermille": 640, "yPermille": 500 },
+    { "assetId": "gmb-t4-rgn-113-v1", "xPermille": 640, "yPermille": 500 },
+    { "assetId": "gmb-t4-rgn-121-v1", "xPermille": 560, "yPermille": 500 },
+    { "assetId": "gmb-t4-rgn-127-v1", "xPermille": 590, "yPermille": 500 }
+  ]
+}

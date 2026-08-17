@@ -1,0 +1,69 @@
+{
+  "schemaVersion": "geonmae-banhada-template4-regional-image-provenance/v1",
+  "platform": "geonmae-banhada",
+  "assetId": "gmb-t4-rgn-127-v1",
+  "lane": "J",
+  "campaign": {
+    "relativePath": "artifacts/image-campaign/geonma-template4-mirror-selfie-v1/campaign.v1.json",
+    "sha256": "cc70a16a108c6b12c512e444c46659652e083ef9b5f7ccc7dfd5a3d54373c6b8"
+  },
+  "rootReview": {
+    "relativePath": "artifacts/image-campaign/geonma-template4-mirror-selfie-v1/contact-sheets/round-01/review.v1.json",
+    "sha256": "96f69a5e79d64abdf709663a2f4ae44d63513cde7f32ff77d5c0b7fa58b52954"
+  },
+  "focalCropAnalysis": {
+    "relativePath": "artifacts/image-campaign/geonma-template4-mirror-selfie-v1/focal-crop-analysis.v1.json",
+    "sha256": "d437353ddb370cddf403b4825afb009ac20f643036722dc9b6fb9addceb8a17c",
+    "rootApprovalGrantedByAnalysis": false
+  },
+  "source": {
+    "relativePath": "public/images/geonma-template4/regional-originals/lane-j/gmb-t4-rgn-127-v1.png",
+    "sha256": "d9e78f1e2c667ab86c72b829751f0350384b5d1fce70983589bb339a894f6e35",
+    "width": 1672,
+    "height": 941,
+    "format": "png"
+  },
+  "outputs": {
+    "desktop": {
+      "publicPath": "/assets/geonmae-banhada/template4-regional/gmb-t4-rgn-127-v1/desktop.webp",
+      "sha256": "48cfd269ad2ba5771036f74914ed550c31b3fbfdda69248a90f1bc5750d8df42",
+      "width": 1600,
+      "height": 900,
+      "bytes": 68580,
+      "crop": {
+        "mode": "center-cover"
+      }
+    },
+    "tablet": {
+      "publicPath": "/assets/geonmae-banhada/template4-regional/gmb-t4-rgn-127-v1/tablet.webp",
+      "sha256": "2edf082403861f7ded58e3d8f1f6f0277024623307d43f839808148366b68d17",
+      "width": 1200,
+      "height": 675,
+      "bytes": 43106,
+      "crop": {
+        "mode": "center-cover"
+      }
+    },
+    "mobile": {
+      "publicPath": "/assets/geonmae-banhada/template4-regional/gmb-t4-rgn-127-v1/mobile.webp",
+      "sha256": "48851a0bfdb2655e7dfef38dbf1bcf1b4d01c9bd6eda7f605f11cdbb2f0a4a11",
+      "width": 768,
+      "height": 600,
+      "bytes": 28898,
+      "crop": {
+        "mode": "asset-focal-cover",
+        "metadata": "src/data/regional-image-focal-points.template4.json",
+        "focalPoint": {
+          "xPermille": 590,
+          "yPermille": 500
+        },
+        "extraction": {
+          "left": 384,
+          "top": 0,
+          "width": 1204,
+          "height": 941
+        }
+      }
+    }
+  }
+}
