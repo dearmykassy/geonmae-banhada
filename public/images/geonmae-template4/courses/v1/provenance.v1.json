@@ -1,0 +1,181 @@
+{
+  "schema": "geonmae-banhada-course-card-images/v1",
+  "status": "ACTIVE",
+  "createdAt": "2026-08-17",
+  "generator": "built-in image_gen",
+  "generationMode": "exactly one built-in image_gen call per course asset",
+  "sharedConstraints": [
+    "professional photorealistic non-sexual wellness context",
+    "clearly adult Korean subjects and fully opaque clothing or covering",
+    "no mirror, selfie, phone, storefront, provider identity, text, logo, or watermark",
+    "original PNG retained; active derivative is exact 4:5 WebP"
+  ],
+  "crossPlatformReview": {
+    "comparedWith": "/Users/ssm/Documents/Codex/honhyeol-massage/public/images/honhyeol-template5/courses/v1/*.webp",
+    "byteHashesDisjoint": true,
+    "compositionDistinct": true,
+    "note": "Thai uses a seated shoulder stretch instead of a side-leg stretch; aroma shows clothed oil preparation instead of an exposed-back table scene; healing uses seated shoulder relaxation instead of herbal compresses; special centers one herbal compress instead of a hot-stone pass; men-only uses an upright massage chair instead of a prone table pose."
+  },
+  "assets": [
+    {
+      "course": "타이마사지",
+      "id": "thai-massage-v1",
+      "sourceGeneratedPath": "/Users/ssm/.codex/generated_images/01a00e20-ff4a-7111-a7e9-20bbd50e9c02/exec-0833fd8e-c2d6-4f8e-ad9a-f5c6c9fe4d07.png",
+      "prompt": "Use case: photorealistic-natural. Asset type: vertical 4:5 homepage course-card image for the Korean wellness platform 건마에반하다, Thai massage course. Primary request: an original professional editorial wellness photograph that unmistakably communicates Thai massage, with two clearly adult Korean people fully clothed in modest opaque loose clothing performing a controlled seated shoulder and upper-back assisted stretch on a padded floor mat. Scene: clean contemporary residential wellness room, warm natural wood and restrained dusty-rose accents. Composition: portrait 4:5, eye-level medium-wide, technique centered and crop-safe with uncluttered lower overlay space. Constraints: non-sexual; no exposed body, bed, mirror, selfie, phone, storefront, provider identity, branded uniform, text, logo, watermark, medical equipment, suggestive pose, intimate contact, or distorted anatomy.",
+      "original": {
+        "path": "public/images/geonmae-template4/courses/v1/thai-massage-v1.png",
+        "sha256": "577084441b667ec03f0527dfe09c45530850cd85c9397c08f925095c908978b5",
+        "bytes": 1764873,
+        "width": 1003,
+        "height": 1568,
+        "format": "png"
+      },
+      "activeDerivative": {
+        "path": "/images/geonmae-template4/courses/v1/thai-massage-v1.webp",
+        "sha256": "279d22c1facc98359715ca908c0e25caffee9361783579078b6afc2d17549971",
+        "bytes": 59820,
+        "width": 800,
+        "height": 1000,
+        "format": "webp",
+        "conversion": "center crop to 4:5; resize 800x1000; WebP quality 86 method 6; metadata stripped"
+      },
+      "visualReview": {
+        "status": "ACCEPTED",
+        "courseCue": "fully clothed assisted Thai shoulder stretch on a floor mat",
+        "cropSafe": true,
+        "noMirrorSelfiePhone": true,
+        "noTextLogoWatermark": true,
+        "noNudityOrSuggestivePose": true,
+        "anatomyPass": true
+      }
+    },
+    {
+      "course": "아로마마사지",
+      "id": "aroma-massage-v1",
+      "sourceGeneratedPath": "/Users/ssm/.codex/generated_images/01a00e20-ff4a-7111-a7e9-20bbd50e9c02/exec-d335eb64-8c93-459f-9d2a-358010851cb2.png",
+      "prompt": "Use case: photorealistic-natural. Asset type: vertical 4:5 homepage course-card image for the Korean wellness platform 건마에반하다, aroma massage course. Primary request: an original professional editorial wellness photograph that communicates aroma massage through a practitioner warming botanical oil beside one unbranded amber bottle, a ceramic bowl, eucalyptus and folded towels; adult Korean client fully clothed and covered from shoulders to ankles by a thick opaque blanket. Scene: calm contemporary residential wellness setting. Composition: slightly elevated portrait 4:5 with oil-preparation hands, bottle and covered client visible and crop-safe. Constraints: non-sexual; no exposed body, bed, mirror, selfie, phone, storefront, provider identity, flame, fake label, text, logo, watermark, medical equipment, suggestive pose, intimate contact, or distorted anatomy.",
+      "original": {
+        "path": "public/images/geonmae-template4/courses/v1/aroma-massage-v1.png",
+        "sha256": "b973c172732b9640f39bb91baf65c8401787e1061be850a32bb016609b6f67e4",
+        "bytes": 2122067,
+        "width": 1122,
+        "height": 1402,
+        "format": "png"
+      },
+      "activeDerivative": {
+        "path": "/images/geonmae-template4/courses/v1/aroma-massage-v1.webp",
+        "sha256": "d1a56c0d1ecd1c105e9bd2b024c3e70582a8a3ae275e71ec160c54b889afe507",
+        "bytes": 80152,
+        "width": 800,
+        "height": 1000,
+        "format": "webp",
+        "conversion": "center crop to 4:5; resize 800x1000; WebP quality 86 method 6; metadata stripped"
+      },
+      "visualReview": {
+        "status": "ACCEPTED",
+        "courseCue": "unbranded aroma oil preparation with a fully covered client",
+        "cropSafe": true,
+        "noMirrorSelfiePhone": true,
+        "noTextLogoWatermark": true,
+        "noNudityOrSuggestivePose": true,
+        "anatomyPass": true
+      }
+    },
+    {
+      "course": "힐링마사지",
+      "id": "healing-massage-v1",
+      "sourceGeneratedPath": "/Users/ssm/.codex/generated_images/01a00e20-ff4a-7111-a7e9-20bbd50e9c02/exec-812d8007-634d-4cf9-9bf1-b8c8b37357e2.png",
+      "prompt": "Use case: photorealistic-natural. Asset type: vertical 4:5 homepage course-card image for the Korean wellness platform 건마에반하다, healing massage course. Primary request: an original professional editorial wellness photograph of gentle restorative relaxation, with two clearly adult Korean people fully clothed; a seated client with eyes peacefully closed and a warm fabric neck wrap while a practitioner applies balanced pressure through clothing at both shoulders. Scene: serene contemporary living-room wellness corner in soft morning light. Composition: portrait 4:5 medium view, calm expression and shoulder technique centered and crop-safe. Constraints: non-sexual; no exposed body, bed, floor mat, oil, hot stones, mirror, selfie, phone, storefront, provider identity, text, logo, watermark, medical claim, suggestive pose, intimate contact, or distorted anatomy.",
+      "original": {
+        "path": "public/images/geonmae-template4/courses/v1/healing-massage-v1.png",
+        "sha256": "509078f48f895ef1646aedff6387697cf471c39b6084b428f6c12471dc4a3af0",
+        "bytes": 2127558,
+        "width": 1122,
+        "height": 1402,
+        "format": "png"
+      },
+      "activeDerivative": {
+        "path": "/images/geonmae-template4/courses/v1/healing-massage-v1.webp",
+        "sha256": "851720b7accf30c1b2ae9f7c32d5410dd8e543e81f8580dfbd154867129f5ce1",
+        "bytes": 80172,
+        "width": 800,
+        "height": 1000,
+        "format": "webp",
+        "conversion": "center crop to 4:5; resize 800x1000; WebP quality 86 method 6; metadata stripped"
+      },
+      "visualReview": {
+        "status": "ACCEPTED",
+        "courseCue": "gentle restorative shoulder pressure with a warm neck wrap",
+        "cropSafe": true,
+        "noMirrorSelfiePhone": true,
+        "noTextLogoWatermark": true,
+        "noNudityOrSuggestivePose": true,
+        "anatomyPass": true
+      }
+    },
+    {
+      "course": "스페셜마사지",
+      "id": "special-massage-v1",
+      "sourceGeneratedPath": "/Users/ssm/.codex/generated_images/01a00e20-ff4a-7111-a7e9-20bbd50e9c02/exec-4558ddc8-471c-4fbe-9093-45f0911ab63c.png",
+      "prompt": "Use case: photorealistic-natural. Asset type: vertical 4:5 homepage course-card image for the Korean wellness platform 건마에반하다, special massage course. Primary request: an original professional premium-wellness editorial photograph represented by a warm herbal-compress technique and carefully arranged tools; adult Korean client fully clothed and covered from shoulders to ankles while the fully clothed practitioner applies one fabric herbal compress through the towel. Scene: refined believable residential wellness room with natural wood tray, folded towels and two smooth dark massage stones. Composition: elevated portrait 4:5, compress action centered and crop-safe. Constraints: non-sexual; no exposed body, bed, oil, mirror, selfie, phone, storefront, provider identity, flame, fake brand, text, logo, watermark, medical claim, suggestive pose, intimate contact, or distorted anatomy.",
+      "original": {
+        "path": "public/images/geonmae-template4/courses/v1/special-massage-v1.png",
+        "sha256": "4cb48a45bb16998e1e78507514369c74fd0c047f73bee6ec9c9dce981fafc592",
+        "bytes": 2168097,
+        "width": 1122,
+        "height": 1402,
+        "format": "png"
+      },
+      "activeDerivative": {
+        "path": "/images/geonmae-template4/courses/v1/special-massage-v1.webp",
+        "sha256": "19859a0ab5b98f1892ae2657f121a4d39a7762737ad0caaec5ab7a4b804812b2",
+        "bytes": 83676,
+        "width": 800,
+        "height": 1000,
+        "format": "webp",
+        "conversion": "center crop to 4:5; resize 800x1000; WebP quality 86 method 6; metadata stripped"
+      },
+      "visualReview": {
+        "status": "ACCEPTED",
+        "courseCue": "warm herbal compress with secondary massage stones and folded towels",
+        "cropSafe": true,
+        "noMirrorSelfiePhone": true,
+        "noTextLogoWatermark": true,
+        "noNudityOrSuggestivePose": true,
+        "anatomyPass": true
+      }
+    },
+    {
+      "course": "남성전용",
+      "id": "men-only-massage-v1",
+      "sourceGeneratedPath": "/Users/ssm/.codex/generated_images/01a00e20-ff4a-7111-a7e9-20bbd50e9c02/exec-20c46af3-5f4a-4743-9d53-247413ef815f.png",
+      "prompt": "Use case: photorealistic-natural. Asset type: vertical 4:5 homepage course-card image for the Korean wellness platform 건마에반하다, men-only massage course. Primary request: an original professional editorial wellness photograph clearly intended for adult men, with an adult Korean male client and adult Korean male practitioner, both fully clothed in modest opaque athletic wellness clothing; client seated forward in a portable upright massage chair while the practitioner applies firm pressure through clothing to the upper shoulders and trapezius. Scene: clean modern residential wellness corner. Composition: portrait 4:5 medium-wide, male client and technique central and crop-safe. Constraints: adult men only; non-sexual; no exposed body, bed, prone pose, oil, compress, mirror, selfie, phone, storefront, provider identity, fake branding, text, logo, watermark, medical claim, suggestive pose, intimate contact, or distorted anatomy.",
+      "original": {
+        "path": "public/images/geonmae-template4/courses/v1/men-only-massage-v1.png",
+        "sha256": "3612b85631e9e5c5082c78b604ff85aa29f975928557fb0f70575b80dbb68889",
+        "bytes": 1781626,
+        "width": 1003,
+        "height": 1568,
+        "format": "png"
+      },
+      "activeDerivative": {
+        "path": "/images/geonmae-template4/courses/v1/men-only-massage-v1.webp",
+        "sha256": "a6aca8c68806a6b29aad445b0e36fb04c0ce11a8f401b60409392d80efbd2372",
+        "bytes": 60604,
+        "width": 800,
+        "height": 1000,
+        "format": "webp",
+        "conversion": "center crop to 4:5; resize 800x1000; WebP quality 86 method 6; metadata stripped"
+      },
+      "visualReview": {
+        "status": "ACCEPTED",
+        "courseCue": "adult male client receiving clothed shoulder pressure in an upright massage chair",
+        "cropSafe": true,
+        "noMirrorSelfiePhone": true,
+        "noTextLogoWatermark": true,
+        "noNudityOrSuggestivePose": true,
+        "anatomyPass": true
+      }
+    }
+  ]
+}

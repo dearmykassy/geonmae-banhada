@@ -30,6 +30,14 @@ function imageStyle(path: string): CSSProperties {
   return { "--card-image": `url(${path})` } as CSSProperties;
 }
 
+const COURSE_CARD_IMAGES = [
+  "/images/geonmae-template4/courses/v1/thai-massage-v1.webp",
+  "/images/geonmae-template4/courses/v1/aroma-massage-v1.webp",
+  "/images/geonmae-template4/courses/v1/healing-massage-v1.webp",
+  "/images/geonmae-template4/courses/v1/special-massage-v1.webp",
+  "/images/geonmae-template4/courses/v1/men-only-massage-v1.webp",
+] as const;
+
 export default function Home() {
   const roots = ACTIVE_ROOT_KEYS.map((key) => {
     const node = getRootNode(key);
@@ -121,7 +129,7 @@ export default function Home() {
                 className="category-card"
                 href="/pricing/"
                 key={group.course}
-                style={imageStyle(`/images/geonmae-template4/home/category-${String(index + 1).padStart(2, "0")}.webp`)}
+                style={imageStyle(COURSE_CARD_IMAGES[index])}
               >
                 <span>{String(index + 1).padStart(2, "0")}</span>
                 <div><h3>{group.course}</h3><p>{group.options[0]?.price}부터</p></div>
