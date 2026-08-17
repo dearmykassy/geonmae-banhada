@@ -8,6 +8,7 @@ const EXPECTED_PUBLIC_PAGES = 1299;
 const EXPECTED_REGION_PAGES = 1291;
 const EXPECTED_REGIONAL_ASSETS = 130;
 const EXPECTED_REGIONAL_WEBPS = 390;
+const EXPECTED_RSS_ITEMS = 2;
 
 function fail(code) {
   throw new Error(`GEONMAE_BUILT_OUTPUT_${code}`);
@@ -64,6 +65,26 @@ if (
   !robots.includes(`${PRODUCTION_ORIGIN}/sitemap.xml`)
 ) fail("ROBOTS");
 
+const rss = await readFile(path.join(OUT, "rss.xml"), "utf8");
+if (Buffer.byteLength(rss, "utf8") >= 10 * 1024 * 1024) fail("RSS_SIZE");
+const rssItems = [...rss.matchAll(/<item>[\s\S]*?<\/item>/gu)].map((match) => match[0]);
+const rssLinks = rssItems.map((item) => item.match(/<link>([^<]+)<\/link>/u)?.[1]);
+const rssGuids = rssItems.map((item) => item.match(/<guid isPermaLink="true">([^<]+)<\/guid>/u)?.[1]);
+const expectedRssLinks = [
+  `${PRODUCTION_ORIGIN}/blog/jibeseo-masaji-badeul-su-issnayo/`,
+  `${PRODUCTION_ORIGIN}/blog/masaji-shop-gagi-himdeul-ttae/`,
+].sort();
+if (
+  rssItems.length !== EXPECTED_RSS_ITEMS ||
+  new Set(rssLinks).size !== EXPECTED_RSS_ITEMS ||
+  rssLinks.some((url) => !url?.startsWith(`${PRODUCTION_ORIGIN}/blog/`)) ||
+  JSON.stringify([...rssLinks].sort()) !== JSON.stringify(expectedRssLinks) ||
+  JSON.stringify(rssGuids) !== JSON.stringify(rssLinks) ||
+  rssItems.some((item) => !/<description>[^<]{200,}<\/description>/u.test(item)) ||
+  rssItems.some((item) => !/<pubDate>[^<]+ GMT<\/pubDate>/u.test(item)) ||
+  !rss.includes(`atom:link href="${PRODUCTION_ORIGIN}/rss.xml"`)
+) fail("RSS");
+
 const manifest = JSON.parse(await readFile(
   path.join(ROOT, "src/data/regional-image-assignments.template4.generated.json"),
   "utf8",
@@ -87,6 +108,7 @@ console.log(JSON.stringify({
   publicPages: publicHtml.length,
   regionPages: regionHtml.length,
   sitemapUrls: sitemapUrls.length,
+  rssItems: rssItems.length,
   regionalAssets: manifest.distribution.assets,
   regionalWebps: webps.length,
 }));

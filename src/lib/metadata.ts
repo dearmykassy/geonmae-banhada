@@ -2,6 +2,17 @@ import type { Metadata } from "next";
 
 export const SITE_ORIGIN = "https://gban.kr";
 export const SITE_NAME = "건마에반하다";
+export const SITEMAP_PATH = "/sitemap.xml";
+export const RSS_PATH = "/rss.xml";
+
+export const DEPLOYMENT_CONTRACT = {
+  deploymentAllowed: true,
+  deploymentBlockers: [] as readonly string[],
+  origin: SITE_ORIGIN,
+  sitemapUrl: new URL(SITEMAP_PATH, SITE_ORIGIN).href,
+  rssUrl: new URL(RSS_PATH, SITE_ORIGIN).href,
+  robots: "index,follow",
+} as const;
 
 export type RouteMetadataContract = {
   route: string;

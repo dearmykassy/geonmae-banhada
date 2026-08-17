@@ -1,0 +1,50 @@
+{
+  "schema": "geonmae-banhada-course-card-image-replacement/v2",
+  "status": "ACTIVE",
+  "createdAt": "2026-08-17",
+  "course": "남성전용",
+  "id": "men-only-massage-v2",
+  "supersedes": {
+    "id": "men-only-massage-v1",
+    "reason": "Replace the upright chair and equipment-like face support with a familiar horizontal massage-table scene."
+  },
+  "generation": {
+    "generator": "built-in image_gen",
+    "failedAttempt": {
+      "fileCreated": false,
+      "reason": "output moderation rejected; no asset retained"
+    },
+    "sourceGeneratedPath": "/Users/ssm/.codex/generated_images/019fed72-9af2-70c2-9986-03c255f0b5be/exec-8db09e1e-4464-4707-9b65-7d88634803f3.png",
+    "prompt": "Photorealistic vertical 4:5 commercial wellness photograph for a homepage service card. Exactly two clearly adult Korean people in a bright modern wellness room. A male client is lying face down comfortably on a normal horizontal padded massage table, with his cheek turned slightly to one side on a simple soft pillow. He remains fully clothed in a clean charcoal athletic T-shirt and full-length pants. A female massage practitioner stands beside the table, fully clothed in a modest beige professional uniform, using both hands over the client's T-shirt to apply ordinary shoulder and upper-back pressure. The scene should look familiar, comfortable, and professional, like a standard clothed wellness massage. Show the horizontal table clearly. Medium-wide portrait framing with both people visible and central crop safety. Leave the bottom fifth darker and visually simple for a white text overlay. Realistic hands and anatomy. No equipment around the face, no chair, no machines, no tools, no exposed skin beyond hands/head, no oil, no bed, no mirror, no phone, no text, no logo, no watermark, no storefront, and no additional people."
+  },
+  "original": {
+    "path": "public/images/geonmae-template4/courses/v2/men-only-massage-v2.png",
+    "sha256": "3f631cba3e9132992ddd471ba5b8ddf5331f8322cefbf7ee7193c0d1cbdcf2e2",
+    "bytes": 1865040,
+    "width": 1122,
+    "height": 1402,
+    "format": "png"
+  },
+  "activeDerivative": {
+    "path": "/images/geonmae-template4/courses/v2/men-only-massage-v2.webp",
+    "sha256": "c6b100edf38bf0becb845ab4617711f7c5dcf71ce8e92b4f21432bbafac98f05",
+    "bytes": 47354,
+    "width": 800,
+    "height": 1000,
+    "format": "webp",
+    "conversion": "center crop to 4:5; resize 800x1000; WebP quality 86 effort 6; metadata stripped"
+  },
+  "visualReview": {
+    "status": "ACCEPTED",
+    "exactlyTwoAdults": true,
+    "femalePractitioner": true,
+    "maleClient": true,
+    "horizontalMassageTable": true,
+    "ordinaryPillowNoMachine": true,
+    "fullyClothed": true,
+    "cropSafe": true,
+    "noMirrorSelfiePhone": true,
+    "noTextLogoWatermark": true,
+    "anatomyPass": true
+  }
+}

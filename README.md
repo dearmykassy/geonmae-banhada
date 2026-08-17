@@ -6,6 +6,7 @@ Template4를 기반으로 한 전국 출장마사지 지역·코스 안내 플�
 
 - 지역 정본: 마사지봄 활성 지역과 동일한 1,291개 경로
 - 전체 사이트맵: 지역 1,291개 + 고정 6개 + 블로그 2개 = 1,299개 URL
+- RSS 2.0: 실제 블로그 글 2개의 canonical URL, 실제 발행일과 전체 본문을 `/rss.xml`로 제공
 - 공개 상태: `https://gban.kr`, production canonical + `index,follow`
 - 운영 사실: 0508-202-3906, 24시간 전화상담, 선입금 없는 현장 후불, 현장 카드 결제, 확정 14개 가격 행
 - 메타데이터: 홈·고정·블로그·지역 전 페이지에 title, keywords, description 적용
@@ -35,4 +36,4 @@ pnpm images:t4:release
 
 ## 공개 전환 체크
 
-운영 canonical·Open Graph·sitemap·robots는 `https://gban.kr`로 통일합니다. 도메인이나 배포 설정을 바꿀 때는 `pnpm verify`를 다시 실행하고 운영 HTTPS, canonical, robots, sitemap 호스트를 함께 확인합니다.
+운영 canonical·Open Graph·sitemap·RSS·robots는 `https://gban.kr`로 통일합니다. 도메인이나 배포 설정을 바꿀 때는 `pnpm verify`를 다시 실행하고 운영 HTTPS, canonical, robots, sitemap·RSS 호스트를 함께 확인합니다. 네이버 서치어드바이저 온보딩에서는 RSS를 제출하고 수집 주기를 `빠르게`로 설정합니다.

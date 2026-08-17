@@ -11,8 +11,11 @@ import { BLOG_POSTS, createBlogMetadata, getBlogPostPath } from "@/data/blog-pos
 import { createRegionContent } from "@/lib/content";
 import {
   createRouteMetadataContract,
+  DEPLOYMENT_CONTRACT,
+  RSS_PATH,
   SITE_NAME,
   SITE_ORIGIN,
+  SITEMAP_PATH,
   toNextMetadata,
 } from "@/lib/metadata";
 import { ACTIVE_REGION_NODES } from "@/lib/regions";
@@ -29,6 +32,14 @@ const FIXED_CONTRACTS = [
 describe("metadata fields", () => {
   it("uses the approved production origin and allows indexing", () => {
     expect(SITE_ORIGIN).toBe("https://gban.kr");
+    expect(DEPLOYMENT_CONTRACT).toEqual({
+      deploymentAllowed: true,
+      deploymentBlockers: [],
+      origin: SITE_ORIGIN,
+      sitemapUrl: new URL(SITEMAP_PATH, SITE_ORIGIN).href,
+      rssUrl: new URL(RSS_PATH, SITE_ORIGIN).href,
+      robots: "index,follow",
+    });
     expect(robots()).toEqual({
       rules: { userAgent: "*", allow: "/" },
       sitemap: "https://gban.kr/sitemap.xml",

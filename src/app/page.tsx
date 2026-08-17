@@ -35,7 +35,7 @@ const COURSE_CARD_IMAGES = [
   "/images/geonmae-template4/courses/v1/aroma-massage-v1.webp",
   "/images/geonmae-template4/courses/v1/healing-massage-v1.webp",
   "/images/geonmae-template4/courses/v1/special-massage-v1.webp",
-  "/images/geonmae-template4/courses/v1/men-only-massage-v1.webp",
+  "/images/geonmae-template4/courses/v2/men-only-massage-v2.webp",
 ] as const;
 
 export default function Home() {
