@@ -94,20 +94,19 @@ img { max-width: 100%; }
 .brand { align-items: center; display: inline-flex; gap: 12px; justify-self: start; }
 .brand-mark, .footer-brand-mark {
   align-items: center;
-  background: linear-gradient(145deg, #f06d8d, var(--pink-deep));
-  border-radius: 50%;
+  background: transparent;
   color: #fff;
   display: inline-flex;
   font-size: 18px;
   font-weight: 900;
   height: 46px;
   justify-content: center;
-  overflow: hidden;
+  overflow: visible;
   position: relative;
   width: 46px;
 }
 .brand-mark::before, .footer-brand-mark::before {
-  background: url("/images/geonmae-template4/brand/mark.png") center / contain no-repeat;
+  background: url("/images/geonmae-template4/brand/heart-mark-v1.png") center / contain no-repeat;
   content: "";
   inset: 0;
   position: absolute;

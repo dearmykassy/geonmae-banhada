@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 
-export const SITE_ORIGIN = "https://preview.geonmae-banhada.invalid";
+export const SITE_ORIGIN = "https://gban.kr";
 export const SITE_NAME = "건마에반하다";
 
 export type RouteMetadataContract = {
@@ -67,6 +67,6 @@ export function toNextMetadata(contract: RouteMetadataContract): Metadata {
     alternates: { canonical: contract.canonical },
     openGraph: contract.openGraph,
     twitter: contract.twitter,
-    robots: { index: false, follow: false, nocache: true },
+    robots: { index: true, follow: true },
   };
 }

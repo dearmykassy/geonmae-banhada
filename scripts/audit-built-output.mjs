@@ -3,7 +3,7 @@ import path from "node:path";
 
 const ROOT = path.resolve(import.meta.dirname, "..");
 const OUT = path.join(ROOT, "out");
-const PREVIEW_ORIGIN = "https://preview.geonmae-banhada.invalid";
+const PRODUCTION_ORIGIN = "https://gban.kr";
 const EXPECTED_PUBLIC_PAGES = 1299;
 const EXPECTED_REGION_PAGES = 1291;
 const EXPECTED_REGIONAL_ASSETS = 130;
@@ -36,8 +36,8 @@ const metadataChecks = {
   title: /<title>[^<]+<\/title>/u,
   description: /<meta name="description" content="[^"]+"\/>/u,
   keywords: /<meta name="keywords" content="[^"]+"\/>/u,
-  canonical: new RegExp(`<link rel="canonical" href="${PREVIEW_ORIGIN.replaceAll(".", "\\.")}\/[^"]*"\\/>`, "u"),
-  robots: /<meta name="robots" content="noindex, nofollow[^"]*"\/>/u,
+  canonical: new RegExp(`<link rel="canonical" href="${PRODUCTION_ORIGIN.replaceAll(".", "\\.")}\/[^"]*"\\/>`, "u"),
+  robots: /<meta name="robots" content="index, follow"\/>/u,
 };
 const forbiddenBrands = /필링홈타이|랑테라피|마사지봄|마사지러브|콜미토닥이/u;
 
@@ -54,10 +54,15 @@ const sitemapUrls = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/gu)].map((match) =
 if (sitemapUrls.length !== EXPECTED_PUBLIC_PAGES || new Set(sitemapUrls).size !== EXPECTED_PUBLIC_PAGES) {
   fail(`SITEMAP_COUNT:${sitemapUrls.length}:${new Set(sitemapUrls).size}`);
 }
-if (sitemapUrls.some((url) => !url.startsWith(`${PREVIEW_ORIGIN}/`))) fail("SITEMAP_HOST");
+if (sitemapUrls.some((url) => !url.startsWith(`${PRODUCTION_ORIGIN}/`))) fail("SITEMAP_HOST");
 
 const robots = await readFile(path.join(OUT, "robots.txt"), "utf8");
-if (!robots.includes("Disallow: /") || !robots.includes(`${PREVIEW_ORIGIN}/sitemap.xml`)) fail("ROBOTS");
+if (
+  !robots.includes("Allow: /") ||
+  robots.includes("Disallow: /") ||
+  !robots.includes(`Host: ${PRODUCTION_ORIGIN}`) ||
+  !robots.includes(`${PRODUCTION_ORIGIN}/sitemap.xml`)
+) fail("ROBOTS");
 
 const manifest = JSON.parse(await readFile(
   path.join(ROOT, "src/data/regional-image-assignments.template4.generated.json"),

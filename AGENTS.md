@@ -7,7 +7,7 @@
 - 브랜드는 `건마에반하다`, 플랫폼 ID는 `geonmae-banhada`로 고정한다. 고객 화면과 메타에 다른 플랫폼 브랜드를 남기지 않는다.
 - 모든 공개 페이지는 meta title, meta keywords, meta description과 self canonical 계약을 가진다. 지역 페이지의 8개 키워드 틀은 사장님 지시를 따른다.
 - 상단 검색은 장식 링크가 아니라 1,291개 지역명과 상위 지역·별칭을 검색해 상세 페이지로 직접 이동해야 한다.
-- 실제 도메인과 배포 승인이 정해지기 전까지 `https://preview.geonmae-banhada.invalid`, `noindex,nofollow`, robots 전체 차단을 유지한다.
+- 운영 도메인은 `https://gban.kr`이다. 모든 공개 페이지의 canonical·Open Graph·sitemap은 이 origin을 사용하고 `index,follow`, robots 전체 허용 상태를 유지한다.
 - 이미지 컨셉은 성인 한국인 여성의 깔끔한 실내 거울 셀피다. 거울 반사면과 프레임이 분명해야 하며 문자·로고·워터마크·선정적 의상·참고 인물 복제는 허용하지 않는다.
 - 쓸데없는 수식, 과장, 후기·평점·인기·최고 표현, 배정·출발·도착 시간 약속, 의료 효능 표현을 고객 문구에 넣지 않는다.
 

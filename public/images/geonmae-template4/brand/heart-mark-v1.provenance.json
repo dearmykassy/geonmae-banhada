@@ -1,0 +1,32 @@
+{
+  "schema": "geonmae-banhada-heart-brand-mark/v1",
+  "status": "ACTIVE",
+  "createdAt": "2026-08-17",
+  "generator": "OpenAI image generation",
+  "source": {
+    "path": "/Users/ssm/.codex/generated_images/019fed72-9af2-70c2-9986-03c255f0b5be/exec-254c4a22-b2bc-4e0d-8503-9aa7616fba89.png",
+    "sha256": "cb713ce64d3ef1567e9a30a67729322dad5c98fe6e7974681d9babec22da8644",
+    "width": 1254,
+    "height": 1254,
+    "hasAlpha": true
+  },
+  "activeAsset": "/images/geonmae-template4/brand/heart-mark-v1.png",
+  "derivatives": [
+    {
+      "path": "/images/geonmae-template4/brand/heart-mark-v1-32.png",
+      "sha256": "c591374b48f6bbf36438318e33089ec13390e5fde0773bd3f2ee0c6b2cfe11e6",
+      "size": "32x32"
+    },
+    {
+      "path": "/images/geonmae-template4/brand/heart-mark-v1-192.png",
+      "sha256": "eb7ad2fd1b732a75d5d97b31b0a7e8ec4e8996a4124389e15d001b615b13540a",
+      "size": "192x192"
+    },
+    {
+      "path": "/images/geonmae-template4/brand/heart-mark-v1-512.png",
+      "sha256": "aa315638c64614e6813162b368ec37b6df2ccb4defa3f0774e591523cf646565",
+      "size": "512x512"
+    }
+  ],
+  "usage": ["site header", "site footer", "browser icon", "apple touch icon"]
+}
