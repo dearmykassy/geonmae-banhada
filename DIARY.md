@@ -2,6 +2,11 @@
 
 > 새 활동과 검증 결과를 최신순으로 기록한다. 비밀값·로그인 정보는 기록하지 않는다.
 
+## 2026-08-17 KST — 네이버 소유확인 메타 배포 준비
+
+- `gban.kr`의 네이버 서치어드바이저 등록 화면에서 발급된 공개 소유확인 메타를 root metadata에 추가했다. 운영 홈 `<head>`에서 exact 1개가 노출되는지 확인한 뒤 Search Advisor의 소유확인 버튼을 누른다.
+- 이 태그는 검색 노출 메타·canonical·robots·RSS·sitemap 내용과 무관하며, 사이트 소유확인 용도로만 유지한다.
+
 ## 2026-08-17 KST — gban.kr RSS 2.0 공개 계약 추가
 
 - 운영 origin `https://gban.kr`을 canonical·Open Graph·robots host·sitemap·RSS의 단일 기준으로 고정하고, 공개 페이지의 `index,follow` 및 robots 전체 허용 계약을 회귀 테스트로 묶었다.

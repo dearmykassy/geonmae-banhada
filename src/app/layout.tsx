@@ -29,6 +29,11 @@ export const metadata: Metadata = {
     "여성전용마사지",
   ],
   robots: { index: true, follow: true },
+  verification: {
+    other: {
+      "naver-site-verification": "07a9330bd80dc23be4a180270c1531f6e177581f",
+    },
+  },
   icons: {
     icon: [
       { url: "/images/geonmae-template4/brand/heart-mark-v1-32.png", type: "image/png", sizes: "32x32" },
