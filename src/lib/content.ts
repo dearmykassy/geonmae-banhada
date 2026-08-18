@@ -3,6 +3,8 @@ import {
   getKeywordRegionLabel,
   getParentNode,
   getRegionOrdinal,
+  getSearchRegionLabel,
+  shortenRegionSearchName,
   type RegionNode,
 } from "@/lib/regions";
 
@@ -93,7 +95,7 @@ const DETAIL_PATTERNS = [
 type RegionalMetaPattern = (fullName: string, scope: string) => string;
 
 const DESCRIPTION_PATTERNS: readonly RegionalMetaPattern[] = [
-  (name, scope) => `${name} 출장마사지의 코스별 시간·금액과 현장 후불·카드 결제 기준을 안내합니다. ${scope}`,
+  (name, scope) => `${name} 출장마사지의 코스별 시간·금액과 현장 후불·카드 결제 기준을 확인할 수 있도록 안내합니다. ${scope}`,
   (name, scope) => `건마에반하다 ${name} 지역의 서비스 주소 확인 순서, 공개 가격표와 24시간 전화상담 정보를 정리했습니다. ${scope}`,
   (name, scope) => `${name} 출장마사지 문의 전에 주소·희망 시각·코스 시간을 확인하고 현장 결제 기준을 살펴보세요. ${scope}`,
   (name, scope) => `${name} 건마에반하다 이용에 필요한 지역 확인, 코스별 공개 금액, 선입금 없는 현장 후불 안내입니다. ${scope}`,
@@ -252,7 +254,10 @@ function regionSentence(
 function metadataScope(node: RegionNode): string {
   const children = getDirectChildren(node);
   if (children.length > 0) {
-    const examples = children.slice(0, 2).map((child) => child.name).join("·");
+    const examples = children
+      .slice(0, 2)
+      .map((child) => shortenRegionSearchName(child.name))
+      .join("·");
     if (!examples) return `하위 지역 ${children.length}개가 연결되어 있습니다.`;
     return children.length > 2
       ? `하위 지역 ${children.length}개가 연결되어 있으며 ${examples} 등을 확인할 수 있습니다.`
@@ -261,12 +266,12 @@ function metadataScope(node: RegionNode): string {
 
   const sourceNames = node.representative?.sourceNames ?? [];
   if (sourceNames.length > 1) {
-    return `${sourceNames.slice(0, 3).join("·")} 행정동 정보를 함께 반영했습니다.`;
+    return `${sourceNames.slice(0, 3).map(shortenRegionSearchName).join("·")} 행정동 정보를 함께 반영했습니다.`;
   }
 
   const parent = getParentNode(node);
   if (parent) {
-    return `${parent.qualifiedName}에 연결된 세부 지역 페이지입니다.`;
+    return `${shortenRegionSearchName(parent.qualifiedName)}에 연결된 세부 지역 페이지입니다.`;
   }
 
   return "실제 서비스 주소는 도로명과 건물명까지 전화로 확인합니다.";
@@ -312,14 +317,15 @@ export function createRegionContent(node: RegionNode): RegionContent {
   const ordinal = getRegionOrdinal(node);
 
   const keywordLabel = getKeywordRegionLabel(node);
+  const searchName = getSearchRegionLabel(node);
   const fullName = node.qualifiedName;
-  const title = pick(TITLE_PATTERNS, ordinal)(fullName, keywordLabel);
+  const title = pick(TITLE_PATTERNS, ordinal)(searchName, keywordLabel);
   const h1 = pick(H1_PATTERNS, ordinal, 1)(fullName);
   const intro = pick(INTRO_PATTERNS, ordinal, 2)(fullName);
   const detail = pick(DETAIL_PATTERNS, ordinal, 3)(fullName);
   const description = DESCRIPTION_PATTERNS[
     stableNodeIndex(node, 101, DESCRIPTION_PATTERNS.length)
-  ](fullName, metadataScope(node));
+  ](searchName, metadataScope(node));
   const secondHook = SECOND_HOOK_PATTERNS[
     stableNodeIndex(node, 211, SECOND_HOOK_PATTERNS.length)
   ](fullName, hookScope(node));
